@@ -1,0 +1,167 @@
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+      <c-card class="mb-4">
+        <c-card-header>
+          <strong>FORMULARIO DE REGISTRO DE PACIENTES</strong>
+        </c-card-header>
+        <c-card-body>
+            <form cForm>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="nombre">Nombre Propietario</label>
+                                <input cFormControl
+                                       id="nombre"
+                                       placeholder ="ingrese nombre"
+                                       type="text"
+                                />
+                              </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="apellidoP">Apellido Paterno</label>
+                                <input cFormControl
+                                id="apellidoP"
+                                placeholder ="ingrese apellido Paterno"
+                                type="text"
+                                />
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="apellidoM">Apellido Materno</label>
+                                <input cFormControl
+                                id="apellidoM"
+                                 placeholder ="ingrese apellido Materno"
+                                type="text"
+                                />
+                              </div>
+                        </div>            
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="telefono">Telefono</label>
+                                <input cFormControl
+                                 id="telefono"
+                                placeholder="ingrese Telefono"
+                                type="number"
+                                />
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="direccion">Direccion</label>
+                                <input cFormControl
+                                id="direccion"
+                                placeholder ="ingrese Direccion"
+                                type="text"
+                                />
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="mascota">Nombre de la Mascota</label>
+                                <input cFormControl
+                                id="mascota"
+                                placeholder ="ingrese nombre de la mascota"
+                                type="text"
+                                />
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="especie">Especie</label>
+                                <input cFormControl
+                                id="especie"
+                                placeholder ="ingrese la especie"
+                                 type="text"
+                                />
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="edad">Edad</label>
+                                <input cFormControl
+                                id="edad"
+                                placeholder ="ingrese la edad"
+                                type="number"
+                                />
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="raza">Raza</label>
+                                <input cFormControl
+                                id="raza"
+                                placeholder ="ingrese la raza"
+                                type="text"
+                                />
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label cLabel for="genero">Genero</label>
+                                <select  aria-label="Seleccione un genero" cSelect >
+                                  <option></option>
+                                  <option value="1">Macho</option>
+                                  <option value="2">Hembra</option>
+                                </select>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+         
+                
+              <div class="mb-3">
+                <label cLabel for="usuario">Usuario</label>
+                <!--<input cFormControl
+                       id="usuario"
+                       type="text" -->      
+                <!--/> -->
+                <select  aria-label="Seleccione usuario" cSelect >
+                  <option></option>
+                  <option value="1">julia</option>
+                  <option value="2">Esteban</option>
+                  <option value="3">Esther</option>
+                </select>
+              </div>
+              <button cButton class="me-1" color="primary" type="submit">
+                Guardar
+              </button>
+            </form>
+        </c-card-body>
+      </c-card> 
+    </c-col>
+
+
+    <c-col xs="12">
+      <table cTable>
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Ingredientes</th>
+          <th scope="col">Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>mark</td>
+              <td>otto</td>
+              <td><button cButton color="warning" variant="outline">Editar</button><button cButton color="danger" variant="outline">Eliminar</button></td>
+            </tr>   
+        </tbody>
+      </table>
+    </c-col>
+  </c-row>
