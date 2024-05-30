@@ -10,4 +10,5 @@ export class RegistropacienteModel {
     edad: Number = 0;
     raza: String = '';
     sexo: String = '';
+    usuario: string = "";
 }

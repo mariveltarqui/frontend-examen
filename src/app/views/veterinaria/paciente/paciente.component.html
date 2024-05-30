@@ -152,16 +152,18 @@
                 
               <div class="mb-3">
                 <label cLabel for="usuario">Usuario</label>
-                <!--<input cFormControl
+                <input cFormControl
                        id="usuario"
-                       type="text" -->      
-                <!--/> -->
-                <select  aria-label="Seleccione usuario" cSelect >
+                       type="text"
+                       name="usuario"
+                       [(ngModel)]= "registroModelo.usuario"  
+                /> 
+                <!--<select  aria-label="Seleccione usuario" cSelect >
                   <option></option>
                   <option value="1">julia</option>
                   <option value="2">Esteban</option>
                   <option value="3">Esther</option>
-                </select>
+                </select>-->
               </div>
               <button (click)="guardarRegistro()" cButton class="me-1" color="primary" type="submit">
                 Guardar

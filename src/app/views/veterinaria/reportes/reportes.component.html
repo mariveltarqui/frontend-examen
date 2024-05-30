@@ -1,55 +1,98 @@
 <c-row ngPreserveWhitespaces>
-    <c-col xs="12">
-      <c-card class="mb-4">
-        <c-card-header>
-          <strong>Reporte veterinaria 1</strong>
-        </c-card-header>
-        <c-card-body>
-          <table cTable>
-            <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Usuario</th>
-              <th scope="col">Acciones</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td><button cButton color="warning" variant="outline">Editar</button> <button cButton color="danger" variant="outline">Eliminar</button></td>
-            </tr>
-            </tbody>
-          </table>
-        </c-card-body>
-      </c-card>
-      <c-card class="mb-4">
-        <c-card-header>
-          <strong>Reporte de veterinaria 2</strong>
-        </c-card-header>
-        <c-card-body>
-          <table cTable>
-            <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Usuario</th>
-              <th scope="col">Acciones</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td><button cButton color="warning" variant="outline">Editar</button> <button cButton color="danger" variant="outline">Eliminar</button></td>
-            </tr>
-            </tbody>
-          </table>
-        </c-card-body>
-      </c-card>
-    </c-col>
-  </c-row>
-  
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Reporte de veterinaria 1</strong>
+      </c-card-header>
+      <c-card-body>
+
+        <div class="col">
+          <div class="mb-3">
+              <label cLabel for="nombre">Elemento a buscar</label>
+              <input cFormControl
+                     id="nombre"
+                     placeholder ="ingrese el dato a buscar"
+                     type="text"
+              />
+            </div>
+      </div>
+      <td><button cButton color="warning" variant="outline">Buscar</button></td>
+
+
+        <table cTable>
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido Paterno</th>
+          <th scope="col">Apellido Materno</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Nombre  Mascota</th>
+          <th scope="col">Especie</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Raza</th>
+          <th scope="col">Genero</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            
+          </tr>
+          </tbody>
+        </table>
+      </c-card-body>
+
+
+    </c-card>
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Reporte de veterinaria 2</strong>
+      </c-card-header>
+     <c-card-body>
+
+        <div class="col">
+          <div class="mb-3">
+              <label cLabel for="nombre">Elemento a buscar</label>
+              <input cFormControl
+                     id="nombre"
+                     placeholder ="ingrese el dato a buscar"
+                     type="text"
+              />
+            </div>
+      </div>
+      <td><button cButton color="warning" variant="outline">Buscar</button></td>
+
+
+        <table cTable>
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido Paterno</th>
+          <th scope="col">Apellido Materno</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Nombre  Mascota</th>
+          <th scope="col">Especie</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Raza</th>
+          <th scope="col">Genero</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            
+          </tr>
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
