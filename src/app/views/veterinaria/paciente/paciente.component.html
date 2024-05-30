@@ -14,6 +14,8 @@
                                 <input cFormControl
                                        id="nombre"
                                        placeholder ="ingrese nombre"
+                                       name="nombre"
+                                       [(ngModel)] = "registroModelo.nombres_propietario"
                                        type="text"
                                 />
                               </div>
@@ -26,6 +28,8 @@
                                 id="apellidoP"
                                 placeholder ="ingrese apellido Paterno"
                                 type="text"
+                                name="apellidoP"
+                                [(ngModel)]= "registroModelo.apellido_paterno"
                                 />
                               </div>
                         </div>
@@ -36,6 +40,8 @@
                                 id="apellidoM"
                                  placeholder ="ingrese apellido Materno"
                                 type="text"
+                                name="apellidoM"
+                                [(ngModel)]= "registroModelo.apellido_materno"
                                 />
                               </div>
                         </div>            
@@ -49,6 +55,8 @@
                                  id="telefono"
                                 placeholder="ingrese Telefono"
                                 type="number"
+                                name="telefono"
+                                [(ngModel)]= "registroModelo.telefono"
                                 />
                               </div>
                         </div>
@@ -59,6 +67,8 @@
                                 id="direccion"
                                 placeholder ="ingrese Direccion"
                                 type="text"
+                                name="direccion"
+                                [(ngModel)]= "registroModelo.direccion"
                                 />
                               </div>
                         </div>
@@ -72,6 +82,8 @@
                                 id="mascota"
                                 placeholder ="ingrese nombre de la mascota"
                                 type="text"
+                                name="mascota"
+                                [(ngModel)]= "registroModelo.nombre_mascota"
                                 />
                               </div>
                         </div>
@@ -82,6 +94,8 @@
                                 id="especie"
                                 placeholder ="ingrese la especie"
                                  type="text"
+                                 name="especie"
+                                 [(ngModel)]= "registroModelo.especie"
                                 />
                               </div>
                         </div>
@@ -95,6 +109,8 @@
                                 id="edad"
                                 placeholder ="ingrese la edad"
                                 type="number"
+                                name="edad"
+                                [(ngModel)]= "registroModelo.edad"
                                 />
                               </div>
                         </div>
@@ -105,17 +121,29 @@
                                 id="raza"
                                 placeholder ="ingrese la raza"
                                 type="text"
+                                name="raza"
+                                [(ngModel)]= "registroModelo.raza"
                                 />
                               </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
-                                <label cLabel for="genero">Genero</label>
+                              <label cLabel for="genero">Genero</label>
+                              <input cFormControl
+                              id="genero"
+                              placeholder ="ingrese el genero"
+                              type="text"
+                              name="genero"
+                              [(ngModel)]= "registroModelo.sexo"
+                              />
+
+                               <!-- <label cLabel for="genero">Genero</label>
                                 <select  aria-label="Seleccione un genero" cSelect >
                                   <option></option>
                                   <option value="1">Macho</option>
-                                  <option value="2">Hembra</option>
-                                </select>
+                                  <option value="2">Hembra</option>    
+                                </select> -->
+                                
                               </div>
                         </div>
                     </div>
@@ -135,7 +163,7 @@
                   <option value="3">Esther</option>
                 </select>
               </div>
-              <button cButton class="me-1" color="primary" type="submit">
+              <button (click)="guardarRegistro()" cButton class="me-1" color="primary" type="submit">
                 Guardar
               </button>
             </form>
@@ -150,17 +178,38 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Nombre</th>
-          <th scope="col">Ingredientes</th>
+          <th scope="col">Apellido Paterno</th>
+          <th scope="col">Apellido Materno</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Nombre  Mascota</th>
+          <th scope="col">Especie</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Raza</th>
+          <th scope="col">Genero</th>
           <th scope="col">Acciones</th>
         </tr>
         </thead>
         <tbody>
+          @for(registro of listaPacientes; track registro;){
             <tr>
               <th scope="row">1</th>
-              <td>mark</td>
-              <td>otto</td>
-              <td><button cButton color="warning" variant="outline">Editar</button><button cButton color="danger" variant="outline">Eliminar</button></td>
-            </tr>   
+              <td>{{registro.nombres_propietario}}</td>
+              <td>{{registro.apellido_paterno}}</td>
+              <td>{{registro.apellido_materno}}</td>
+              <td>{{registro.telefono}}</td>
+              <td>{{registro.direccion}}</td>
+              <td>{{registro.nombre_mascota}}</td>
+              <td>{{registro.especie}}</td>
+              <td>{{registro.edad}}</td>
+              <td>{{registro.raza}}</td>
+              <td>{{registro.sexo}}</td>
+              <td>
+              <button cButton color="warning" variant="outline" (click)="verReceta(registro)">Editar</button>
+              <button (click)="eliminarRegistro(registro)" cButton color="danger" variant="outline">Eliminar</button></td>
+            </tr>  
+          }
+              
         </tbody>
       </table>
     </c-col>
